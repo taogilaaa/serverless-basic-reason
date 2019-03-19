@@ -10,7 +10,9 @@
     "in-source": false
   },
   "suffix": ".js",
-  "bs-dependencies": [],
+  "bs-dependencies": [
+    "bs-fetch"
+  ],
   "warnings": {
     "error" : "+101"
   },
