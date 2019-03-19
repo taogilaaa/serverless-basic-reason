@@ -1,0 +1,17 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+.DS_Store
+.merlin
+.bsb.lock
+npm-debug.log
+/lib/bs/
+
+.webpack
+.env
+
+lib
