@@ -2,7 +2,7 @@
 
 ## Getting started
 
-This repo contains simple usage of `AWS Lambda` with `serverless` and `reason` with `bucklescript` to `nodejs`, initialized by running `bsb -init my-new-project -theme basic-reason` then adding the needed `serverless` config files.
+This repo contains simple usage of `AWS Lambda` with `serverless` and `reasonml` with `bucklescript` to `nodejs`, initialized by running `bsb -init my-new-project -theme basic-reason` then adding the needed `serverless` config files.
 
 **Clone the repository**
 
@@ -41,6 +41,16 @@ We can do a `GET` request to
   }
   ```
 
+ * `/hello?name=Boss` -> Hello test API with name query parameter
+  ```json
+  {
+    "message": "Hello Boss",
+    "event": {
+      ...
+    }
+  }
+  ```
+
  * `/users` -> Github `users` api
   ```json
     [
@@ -62,10 +72,7 @@ We can do a `GET` request to
     ...
   }
  ```
-
-The server returns the following response:
-
-
+ 
 ## Editor
 If you use `vscode`, Press `Windows + Shift + B` it will build automatically
 
@@ -79,3 +86,7 @@ serverless config credentials --provider aws --key YOUR_AWS_ACCESS_KEY_ID --secr
 
 yarn deploy # or npm run deploy
 ```
+
+## Notes
+
+`"suffix": ".js"` on `bsconfig.json` is a workaround for aws lambda not accepting files with multiple `.` (ex: `Main.bs.js`)
