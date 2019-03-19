@@ -18,6 +18,9 @@ functions:
           method: get
           cors: true
 
+plugins:
+  - serverless-offline
+
 package:
   exclude:
     - ./**

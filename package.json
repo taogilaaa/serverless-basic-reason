@@ -5,7 +5,8 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "deploy": "npm run build && sls deploy --stage dev"
+    "deploy": "npm run clean && npm run build && npx sls deploy --stage dev",
+    "serve": "npx serverless offline start"
   },
   "keywords": [
     "BuckleScript"
@@ -13,6 +14,8 @@
   "author": "Alfian Pramudita <alfian.pramudita@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^4.0.18"
+    "bs-platform": "^4.0.18",
+    "serverless": "^1.39.1",
+    "serverless-offline": "^4.9.2"
   }
 }
