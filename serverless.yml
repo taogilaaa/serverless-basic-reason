@@ -1,0 +1,25 @@
+service: serverless-basic-re
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: ap-southeast-1
+  deploymentBucket:
+    name: wp-lambda-bucket
+    serverSideEncryption: AES256
+
+functions:
+  hello:
+    handler: lib/js/src/Hello.handler
+    events:
+      - http:
+          path: /hello
+          method: get
+          cors: true
+
+package:
+  exclude:
+    - ./**
+  include:
+    - lib/js/src/**
