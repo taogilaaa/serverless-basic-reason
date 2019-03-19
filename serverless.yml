@@ -17,6 +17,20 @@ functions:
           path: /hello
           method: get
           cors: true
+  users:
+    handler: lib/js/src/Github.usersHandler
+    events:
+      - http:
+          path: /users
+          method: get
+          cors: true
+  user:
+    handler: lib/js/src/Github.userHandler
+    events:
+      - http:
+          path: /users/{userId}
+          method: get
+          cors: true
 
 custom:
   webpack:
