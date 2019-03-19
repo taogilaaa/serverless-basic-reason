@@ -14,8 +14,13 @@
   "author": "Alfian Pramudita <alfian.pramudita@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "babel-loader": "^8.0.5",
     "bs-platform": "^4.0.18",
     "serverless": "^1.39.1",
-    "serverless-offline": "^4.9.2"
+    "serverless-offline": "^4.9.2",
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.29.6",
+    "webpack-node-externals": "^1.7.2"
   }
 }

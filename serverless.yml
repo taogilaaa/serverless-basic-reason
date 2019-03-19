@@ -18,11 +18,15 @@ functions:
           method: get
           cors: true
 
+custom:
+  webpackIncludeModules: true
+  webpack:
+    webpackConfig: ./webpack.config.js
+    packager: "yarn"
+
 plugins:
+  - serverless-webpack
   - serverless-offline
 
 package:
-  exclude:
-    - ./**
-  include:
-    - lib/js/src/**
+  individually: true
