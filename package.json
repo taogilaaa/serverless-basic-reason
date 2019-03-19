@@ -4,12 +4,13 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "deploy": "npm run build && sls deploy --stage dev"
   },
   "keywords": [
     "BuckleScript"
   ],
-  "author": "",
+  "author": "Alfian Pramudita <alfian.pramudita@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^4.0.18"
