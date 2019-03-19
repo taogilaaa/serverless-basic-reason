@@ -19,8 +19,8 @@ functions:
           cors: true
 
 custom:
-  webpackIncludeModules: true
   webpack:
+    includeModules: true
     webpackConfig: ./webpack.config.js
     packager: "yarn"
 
